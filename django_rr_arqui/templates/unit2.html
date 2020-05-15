@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+  {% load static %}
+  {% block body_block %}
+  <div class="w3-row w3-grey" id="myGrid" style="margin-bottom:100px">
+    <div class="w3-content w3-justify  w3-padding-64" id="about">
+
+    <h2 style="text-align: center">UNIDAD 2. Estructura y Funcionamiento de la Unidad Central de Procesamiento</h2>
+    <h4>2.1. ORGANIZACIÓN DEL PROCESADOR</h4>
+    <hr style="width:300px" class="w3-opacity">
+    <p class="tab">Un procesador, incluye tanto registros visibles por el usuario como registros de control/estado. Los registros visibles por el usuario pueden ser de uso general o tener una utilidad especial, mientras que los registros de control y estado se usan para controlar el funcionamiento del procesador, un claro ejemplo es el contador de programa</p>
+    <p class="tab">Los procesadores utilizan la segmentación de instrucciones para acelerar la ejecución. La segmentación de cauce se puede dividir en ciclo de instrucción en varias etapas separadas que operan secuencialmente</p>
+
+    <h4>El procesador y el bus del sistema</h4>
+    <p>La conexión del procesador con el resto del sistema a través del bus del sistema.<br>
+    • La ALU lleva a cabo el verdadero cálculo o procesamiento de datos.<br>
+    • La unidad de control controla la transferencia de datos e instrucciones así a dentro y así afuera del procesador, y el funcionamiento de la ALU.<br>
+    • Consta con una memoria interna mínima, con un conjunto de posiciones de almacenamiento llamadas registros.</p>
+
+    <h4>2.2. ESTRUCTURAS DE REGISTROS</h4>
+    <hr style="width:300px" class="w3-opacity">
+    <h5>2.2.1. Registros Visibles para el Usuario</h5>
+    <p class="tab">Son aquellos que pueden ser referenciado por medio del lenguaje maquina que ejecuta la CPU, los registro que normalmente disponibles son:
+    <b>Registros de propósito general</b>
+    son aquellos que pueden guardar tanto datos como direcciones
+    <b>Registro de datos</b>
+    Pueden ser asignados por el programador a diversas funciones. En algunos casos son de propósito general y pueden ser empleados por cualquier instrucción de máquina que lleve a cabo operaciones sobre los datos.
+    <b>Registros de direcciones</b>
+    Contienen direcciones en la memoria principal de datos y este tipo de registro puede ser de propósito general o estar a un modo específico de direccionamiento.
+    <b>Códigos de condición</b>
+    También conocidos como indicadores o flags. Los códigos de  condición, son bits activados por el procesador como resultado de determinadas operaciones</p>
+
+    <h5>2.2.2. Registros de Control</h5>
+    <p class="tab">Se utilizan para controlar las operaciones del procesador, la mayor parte de estos registros no son visibles al usuario y algunos pueden ser accesibles a las instrucciones de maquina ejecutadas en un modo de control. Los registros utilizados son los siguientes:
+    </p>
+
+    <h4>2.3.CICLOS DE LA INSTRUCCIÓN</h4>
+    <hr style="width:300px" class="w3-opacity">
+    <h5>2.3.1 Ciclo Fetch-Decode-Execute</h5>
+    <p class="tab">Fase de Obtención donde:
+    El registro Contador del Programa (PC) tiene la dirección de la siguiente instrucción que va obtener.
+    El procesador obtiene la siguiente instrucción de la localidad de memoria apuntada por el PC.
+    El PC se incrementa:
+    A menos que se le indique otra cosa
+    El PC queda apuntando a la siguiente instrucción
+    La instrucción se carga en el Registro Instrucción (IR).
+    El procesador interpreta la instrucción y realiza las acciones  indicadas por ella.</p>
+
+    <h5>2.3.2 SEGMENTACION</h5>
+    <p class="tab">Es la técnica de solapamiento de instrucciones.mediante la división de su ejecución en etapas o segmentos.
+    Los segmentos están conectados entre sí cada uno al siguiente.
+    Todos los segmentos proceden y progresan a la vez.
+    La segmentación es transparente al programador.</p>
+
+    <h5>2.3.3 Conjunto de Instrucciones</h5>
+    <p class="tab">Un conjunto de instrucciones o ISA ( Arquitectura del Conjunto de Instrucciones) es una especificación que detalla las instrucciones que una CPU de un ordenador puede entender y ejecutar.
+    El término describe los aspectos del procesador generalmente visibles a un programador, incluyendo los tipos de datos nativos, las instrucciones, los registros, la arquitectura de memoria y las interrupciones, entre otros aspectos.</p>
+
+
+    <h5>2.3.4. Modos de Direccionamiento</h5>
+    <p class="tab">Se les llama modos de direccionamiento a las distintas formas de combinar los operandos según el acceso que se hace a memoria.
+    Dicho de otra manera, un modo de direccionamiento será una forma de parámetro para las instrucciones.
+    Una instrucción que lleve un parámetro, por lo tanto, usará un modo de direccionamiento, que dependerá de cómo direccionará (accesara) al parámetro; una instrucción de dos parámetros, combinará dos modos de direccionamiento.</p>
+  </div>
+  </div>
+{% endblock %}

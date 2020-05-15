@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+  {% load static %}
+  {% block body_block %}
+  <div class="w3-row w3-grey" id="myGrid" style="margin-bottom:100px">
+    <div class="w3-content w3-justify w3-padding-64" id="about">
+    <h2 style="text-align: center">UNIDAD 1: Arquitectura de Cómputo</h2>
+      <h4>1.1. MODELOS DE ARQUITECTURAS DE CÓMPUTO</h4>
+      <hr style="width:300px" class="w3-opacity">
+      <h5>1.1.1. Clásicas</h5>
+      <p class="tab">Estas arquitecturas se desarrollaron en las primeras computadoras electromecánicas y de tubos de vacío. Aun son usadas en procesadores empotrados de gama baja y son la base de la mayoría de las arquitecturas modernas.</p>
+
+      <h5>1.1.2. Segmentadas</h5>
+      <p class="tab">Las arquitecturas segmentadas o con segmentación del cauce buscan mejorar el desempeño realizando paralelamente varias etapas del ciclo de instrucción al mismo tiempo. El procesador se divide en varias unidades funcionales independientes y se dividen entre ellas el procesamiento de las instrucciones.</p>
+      <p class="tab">Para comprender mejor esto, supongamos que un procesador simple tiene un ciclo de instrucción sencillo consistente solamente en una etapa de búsqueda del código de instrucción y en otra etapa de ejecución de la instrucción. En un procesador sin segmentación del cauce, las dos etapas se realizarían de manera secuencial para cada una de las instrucciones.</p>
+
+      <h5>1.1.3. Multiprocesamiento</h5>
+      <p class="tab">Cuando se desea incrementar el desempeño más aya de lo que permite la técnica de segmentación del cauce (limite teórico de una instrucción por ciclo de reloj), se requiere utilizar más de un procesador para la ejecución del programa de aplicación.</p>
+      <p class="tab">Las CPU de multiprocesamiento:
+      <br>    SISO – (Single Instruction, Single Operand ) computadoras independientes
+      <br>    SIMO – (Single Instruction, Multiple Operand ) procesadores vectoriales
+      <br>    MISO – (Multiple Instruction, Single Operand ) No implementado
+      <br>    MIMO – (Multiple Instruction, Multiple Operand ) sistemas SMP, Clusters
+      </p>
+
+      <h4>1.2. ANÁLISIS DE LOS COMPONENTES</h4>
+      <hr style="width:300px" class="w3-opacity">
+      <h5>1.2.1. CPU</h5>
+      <p class="tab">La unidad central de procesamiento es el hardware dentro de un computador u otros dispositivos programables, que interpreta las instrucciones de un programa ordenador mediante la realización de las operaciones básicas aritméticas, lógicas y de entrada/salida del sistema.</p>
+      <p class="tab">Una computadora puede tener más de una cpu esto se llama multiprocesamiento. Todas las CPU modernas son microprocesadores, lo que significa que contienen un solo chip. Algunos circuitos integrados pueden contener varias cpus en un solo chip; estos IC son denominados procesadores multi-core. Un CI que contiene una cpu también puede contener los dispositivos periféricos, y otros componentes de un sistema informático; esto se llama un sistema de chip .</p>
+
+      <h5>1.2.2. MEMORIA</h5>
+      <p class="tab">En informática, la memoria es el dispositivo que retiene, memoriza o almacena datos informáticos durante algún intervalo de tiempo. La memoria proporciona una de las principales funciones de la computación moderna: el almacenamiento de información y conocimiento. Es uno de los componentes fundamentales de la computadora, que interconectada a la unidad central de procesamiento (CPU, por las siglas en inglés de Central Processing Unit) y los dispositivos de entrada/salida, implementan lo fundamental del modelo de computadora de la arquitectura de von Neumann.</p>
+      <p class="tab">Memoria primaria (MP), memoria principal, memoria central o memoria interna es la memoria de la computadora donde se almacenan temporalmente tanto los datos como los programas que la unidad central de procesamiento (CPU) está procesando o va a procesar en un determinado momento. Por su función, la MP debe ser inseparable del microprocesador o CPU, con quien se comunica a través del bus de datos y el bus de direcciones. El ancho del bus determina la capacidad que posea el microprocesador para el direccionamiento de direcciones en memoria.</p>
+
+      <h5>1.2.3. ENTRADA/SALIDA</h5>
+      <p class="tab">Los dispositivos de entrada convierten la información en señales eléctricas que se almacenan en la memoria central. Los dispositivos de entrada típicos son los teclados, otros son: lápices ópticos, palancas de mando (joystick), CD-ROM, discos compactos (CD), etc.
+  Hoy en día es muy frecuente que el usuario utilice un dispositivo de entrada llamado ratón que mueve un puntero electrónico sobre una pantalla que facilita la interacción usuario-máquina.</p>
+      <p class="tab">El problema con E/S programada es que el CPU tiene que esperar un tiempo considerable a que el módulo de E/S en cuestión esté preparado para recibir o transmitir los datos. El CPU debe estar comprobando continuamente el estado del módulo de E/S. Se degrada el desempeño del sistema.
+  Una alternativa es que el CPU tras enviar una orden de E/S continue realizando algún trabajo útil. El módulo de E/S interrumpirá al CPU para solicitar su servicio cuando esté preparado para intercambiar datos. El CPU ejecuta la transferencia de datos y después continúa con el procesamiento previo.</p>
+
+
+      <h5>1.2.4 BUSES</h5>
+      <p class="tab">Consta de un camino que permite comunicar selectivamente un cierto número de componentes o dispositivos, de acuerdo a unas ciertas reglas o normas de conexión.</p>
+      <br>
+      <h5>Interrupciones</h5>
+      <p class="tab">En el contexto de la informática, una interrupción (del inglés Interrupt Request, también conocida como petición de interrupción) es una señal recibida por el procesador de un ordenador, indicando que debe "interrumpir" el curso de ejecución actual y pasar a ejecutar código específico para tratar esta situación</p>
+
+      </div>
+  </div>
+{% endblock %}

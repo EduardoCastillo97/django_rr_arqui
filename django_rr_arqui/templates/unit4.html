@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+  {% load static %}
+  {% block body_block %}
+  <div class="w3-row w3-grey" id="myGrid" style="margin-bottom:100px">
+    <div class="w3-content w3-justify w3-padding-64" id="about">
+    <h2 style="text-align: center">UNIDAD 4: Procesamiento Paralelo</h2>
+    <h4>4.1. ESTRUCTURA</h4>
+    <hr style="width:300px" class="w3-opacity">
+    <p class="tab">
+    La computación paralela es una forma de cómputo en la que muchas instrucciones se ejecutan simultáneamente, operando sobre el principio de que problemas grandes, a menudo se pueden dividir en unos más pequeños, que luego son resueltos simultáneamente(en paralelo). Hay varias formas diferentes de computación paralela: paralelismo a nivel de bit, paralelismo a nivel de instrucción, paralelismo de datos y paralelismo de tareas. El paralelismo se ha empleado durante muchos años, sobre todo en la computación de altas prestaciones, pero el interés en ella ha crecido últimamente debido a las limitaciones físicas que impiden el aumento de la frecuencia.</p>
+    <p class="tab">Las computadoras paralelas pueden clasificarse según el nivel de paralelismo que admite su hardware: equipos con procesadores multinúcleo y multi-procesador que tienen múltiples elementos de procesamiento dentro de una sola máquina y los clústeres, MPPS y grids que utilizan varios equipos para trabajar en la misma tarea. Muchas veces, para acelerar la tareas específicas, se utilizan arquitecturas especializadas de computación en paralelo junto a procesadores tradicionales</p>
+
+    <h4>4.2. TIPOS DE COMPUTACIÓN PARALELA</h4>
+    <hr style="width:300px" class="w3-opacity">
+    <b>PARALELISMO A NIVEL DE BIT</b>
+    <p class="tab">En la década de 1970 hasta alrededor de 1986, la aceleración en la arquitectura de computadores se lograba en gran medida duplicando el tamaño de la palabra en la computadora, la cantidad de información que el procesador puede manejar por ciclo. El aumento del tamaño de la palabra reduce el número de instrucciones que el procesador debe ejecutar para realizar una operación en variables cuyos tamaños son mayores que la longitud de la palabra. Por ejemplo, cuando un procesador de 8 bits debe sumar dos enteros de 16 bits, el procesador primero debe adicionar los 8 bits de orden inferior de cada número entero con la instrucción de adición, a continuación, añadir los 8 bits de orden superior utilizando la instrucción de adición con acarreo que tiene en cuenta el bit de acarreo de la adición de orden inferior, en este caso un procesador de 8 bits requiere dos instrucciones para completar una sola operación, en donde un procesador de 16 bits necesita una sola instrucción para poder completarla.</p>
+    <br>
+
+    <b>PARALELISMO A NIVEL DE INSTRUCCIÓN</b>
+    <p class="tab">Un programa de ordenador es, en esencia, una secuencia de instrucciones ejecutadas por un procesador. Estas instrucciones pueden reordenarse y combinarse en grupos que luego son ejecutadas en paralelo sin cambiar el resultado del programa. Esto se conoce como paralelismo a nivel de instrucción.
+    Los procesadores modernos tienen ”pipeline” de instrucciones de varias etapas. Cada etapa en el pipeline corresponde a una acción diferente que el procesador realiza en la instrucción correspondiente a la etapa; un procesador con un pipeline de N etapas puede tener hasta n instrucciones diferentes en diferentes etapas de finalización.</p>
+    <br>
+    <b>PARALELISMO DE DATOS</b>
+    <p class="tab">El paralelismo de datos es el paralelismo inherente en programas con ciclos, que se centra en la distribución de los datos entre los diferentes nodos computacionales que deben tratarse en paralelo. La paralelización de ciclos conduce a menudo a secuencias similares de operaciones (no necesariamente idénticas) o funciones que se realizan en los elementos de una gran estructura de datos. Muchas de las aplicaciones científicas y de ingeniería muestran paralelismo de datos.
+      Durante muchos años, la computación paralela se ha aplicado en la computación de altas prestaciones, pero el interés en ella ha aumentado en los últimos años debido a las restricciones físicas que impiden el escalado en frecuencia.</p>
+
+    <h4>4.3. EVALUACIÓN DE MULTIPROCESADORES</h4>
+    <hr style="width:300px" class="w3-opacity">
+    <b>La carga y la evaluación</b>
+    <p class="tab">
+      <b>Carga (load):</b> conjunto de tareas que ha de hacer un sistema
+      Programas, datos y órdenes de los usuarios <br><br>
+      <b>Carga de prueba (workload)</b>
+      Carga empleada en un estudio de evaluación <br><br>
+      <b>Variables que reflejan la carga</b>
+      Número de programas simultáneos en ejecución
+      Accesos por unidad de tiempo a un servidor de páginas web
+      Peticiones por unidad de tiempo a una base de datos
+      Para comprender mejor esto, supongamos que un procesador simple tiene un ciclo de instrucción sencillo consistente solamente en una etapa de búsqueda del código de instrucción y en otra etapa de ejecución de la instrucción. En un procesador sin segmentación del cauce, las dos etapas se realizarían de manera secuencial para cada una de las instrucciones.
+    </p>
+    <br>
+    <b>Medidas de rendimiento</b>
+    <p class="tab">
+
+      Tiempo de respuesta (response time)<br>
+      • Tiempo total desde el principio hasta el final de la actividad <br>
+      • Tiempo de ejecución de un programa (s)<br>
+      • Tiempo de acceso a un disco (ms)<br>
+      Productividad (throughput)<br>
+      • Cantidad de trabajo hecho por unidad de tiempo <br>
+      • Programas ejecutados por hora<br>
+      • Páginas por hora servidas por un servidor web <br>
+      • Correos por segundo procesados por un servidor de correo <br>
+      • Peticiones por minuto procesados por un servidor de comercio electrónico <br>
+    </p>
+    </div>
+  </div>
+{% endblock %}
